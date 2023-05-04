@@ -13,7 +13,10 @@ const schema = new mongoose.Schema({
     type: Number,
     require: true,
   },
-  date: new Date().now(),
+  date: {
+    type: String,
+    default: new Date().toUTCString().slice(5, 16),
+  },
 });
 
 const Exercice = mongoose.model("Exercice", schema);
