@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const schema = new mongoose.Schema({
-  _id: {
+  username: {
     type: String,
     require: true,
   },
@@ -15,7 +15,7 @@ const schema = new mongoose.Schema({
   },
   date: {
     type: String,
-    default: new Date().toUTCString().slice(5, 16),
+    default: "",
   },
 });
 
