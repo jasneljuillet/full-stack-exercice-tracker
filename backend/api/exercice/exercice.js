@@ -1,4 +1,3 @@
-import Exercice from "../../core/models/Exercise.js";
 import User from "../../core/models/User.js";
 
 const addExercice = async (req, res) => {
@@ -26,4 +25,5 @@ const addExercice = async (req, res) => {
     .catch((err) => res.send(err));
 };
 
-export default { addExercice };
+const fullExercice = async (req, res) => {};
+export default { addExercice, fullExercice };
