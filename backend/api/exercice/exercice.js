@@ -25,5 +25,12 @@ const addExercice = async (req, res) => {
     .catch((err) => res.send(err));
 };
 
-const fullExercice = async (req, res) => {};
+const fullExercice = async (req, res) => {
+  const { _id } = req.body;
+  await User.findById({ _id })
+    .then((logs) => {
+      res.send(logs);
+    })
+    .catch((err) => res.send(err));
+};
 export default { addExercice, fullExercice };

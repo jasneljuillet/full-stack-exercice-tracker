@@ -21,6 +21,8 @@ import exercice from "./api/exercice/exercice.js";
 app.post("/api/users/:id/exercises", (req, res) =>
   exercice.addExercice(req, res)
 );
+// full log for any user
+app.get("/api/users/:id/logs", (req, res) => exercice.fullExercice(req, res));
 
 app.get("/", function (req, res) {
   res.send("Excercie Tracker api bya Jasnel.dev");
